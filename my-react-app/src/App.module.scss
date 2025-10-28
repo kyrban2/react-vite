@@ -1,0 +1,23 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.app {
+	min-height: 100vh;
+}
+
+.main {
+	padding: $spacing-lg;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.buttonGroup {
+	@include flex-center;
+	gap: $spacing-md;
+	margin-bottom: $spacing-lg;
+
+	@include responsive(mobile) {
+		flex-direction: column;
+		width: 100%;
+	}
+}
