@@ -3,7 +3,12 @@ declare module '*.module.scss' {
 	export default classes
 }
 
-declare module '*.scss' {
-	const content: { [key: string]: string }
-	export default content
+declare module '*.png' {
+	const src: string
+	export default src
+}
+
+declare module '*.jpg' {
+	const src: string
+	export default src
 }

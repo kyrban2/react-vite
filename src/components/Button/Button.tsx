@@ -3,12 +3,20 @@ import styles from './Button.module.scss'
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 	children: ReactNode
-	variant?: 'primary' | 'secondary' | string // Добавьте другие варианты по необходимости
+	variant?: 'primary' | 'secondary'
 }
 
-const Button = ({ children, variant = 'primary', ...props }: ButtonProps) => {
+const Button = ({
+	children,
+	variant = 'primary',
+	className = '',
+	...props
+}: ButtonProps) => {
 	return (
-		<button className={`${styles.button} ${styles[variant]}`} {...props}>
+		<button
+			className={`${styles.button} ${styles[variant]} ${className}`.trim()}
+			{...props}
+		>
 			{children}
 		</button>
 	)
