@@ -1,4 +1,3 @@
-// Импорт компонентов
 import Button from './components/Button/Button'
 import Hero from './components/Hero/Hero'
 import ImageComponent from './components/ImageComponent/ImageComponent'
