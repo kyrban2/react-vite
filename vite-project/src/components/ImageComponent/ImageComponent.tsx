@@ -1,24 +1,22 @@
-import styles from './ImageComponent.module.scss'
-
-// Импорт изображений
-import iconImg from '@/assets/images/icon.png'
-import logoImg from '@/assets/images/logo.png'
+import background from '../../assets/images/background.jpg'
+import icon from '../../assets/images/icon.png'
+import logo from '../../assets/images/logo.png'
+// Убедитесь что все пути имеют правильные слеши: ../../
 
 const ImageComponent = () => {
 	return (
-		<div className={styles.container}>
-			<h2>Демонстрация работы с изображениями</h2>
-
-			<div className={styles.imageGrid}>
-				{/* Изображение как background в CSS */}
-				<div className={styles.backgroundImage}></div>
-
-				{/* Изображение как тег img */}
-				<img src={logoImg} alt='Logo' className={styles.logo} />
-
-				<img src={iconImg} alt='Icon' className={styles.icon} />
-			</div>
-		</div>
+		<>
+			<img src={logo} alt='Logo' />
+			<img src={icon} alt='Icon' />
+			<div
+				style={{
+					backgroundImage: `url(${background})`,
+					width: '300px',
+					height: '200px',
+					backgroundSize: 'cover',
+				}}
+			></div>
+		</>
 	)
 }
 
