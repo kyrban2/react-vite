@@ -9,7 +9,7 @@ export default defineConfig({
 			'@': path.resolve(__dirname, './src'),
 		},
 	},
-	base: '/final/',
+	base: '/final1/',
 	build: {
 		rollupOptions: {
 			output: {
