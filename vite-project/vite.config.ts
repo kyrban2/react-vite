@@ -9,7 +9,7 @@ export default defineConfig({
 			'@': path.resolve(__dirname, './src'),
 		},
 	},
-	base: '/final1/',
+	base: '/react-vite/',
 	build: {
 		rollupOptions: {
 			output: {
